@@ -35,8 +35,8 @@
 <p>​        Hi Sanarous! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 <p>​        说明SSH添加成功</p>
 <p>​        3.4 如果本机不是第一次使用git接github，则只需要测试SSH是否添加成功</p>
-<h4 id="4-Git提交的用户信息"><a href="#4-Git提交的用户信息" class="headerlink" title="4.Git提交的用户信息"></a>4.Git提交的用户信息</h4><p>$ git config – global user.name “GitHub用户名”</p>
-<p>$ git config – global user.email “GitHub邮箱地址”</p>
+<h4 id="4-Git提交的用户信息"><a href="#4-Git提交的用户信息" class="headerlink" title="4.Git提交的用户信息"></a>4.Git提交的用户信息</h4><p>​    $ git config – global user.name “GitHub用户名”</p>
+<p>​    $ git config – global user.email “GitHub邮箱地址”</p>
 <h3 id="三、通过Hexo框架将博客部署到GitHub上"><a href="#三、通过Hexo框架将博客部署到GitHub上" class="headerlink" title="三、通过Hexo框架将博客部署到GitHub上"></a>三、通过Hexo框架将博客部署到GitHub上</h3><h4 id="1-打开E-blog-chencan-config-yml的配置文件，找到deploy并补全"><a href="#1-打开E-blog-chencan-config-yml的配置文件，找到deploy并补全" class="headerlink" title="1.打开E:\blog\chencan_config.yml的配置文件，找到deploy并补全"></a>1.打开E:\blog\chencan_config.yml的配置文件，找到deploy并补全</h4><p>​        deploy:</p>
 <pre><code>type: git</code></pre><p>​             repo: <a href="mailto:git@github.com">git@github.com</a>:GitHub用户名/GitHub用户名.github.io.git</p>
 <p>​             branch: master</p>
