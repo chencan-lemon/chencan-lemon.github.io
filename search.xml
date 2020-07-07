@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Windows系统下搭建个人博客</title>
+    <url>/2020/07/07/Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<hr>
+<p>title:Windows系统下搭建个人博客<br>date:2020-07-07 11:00:33<br>tags:Win10 Hexo GitHub</p>
+<hr>
+<p>一、安装Hexo框架[<a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a></p>
+<p>​    1.安装依赖环境</p>
+<p>​        1.1 下载Node.js  官网地址<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a>  选择LTS长期支持版</p>
+<p>​        1.2 下载git  官网地址<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+<p>​    2.安装Hexo</p>
+<p>​        在刚才下载好的git文件下，找到git-bash.exe并运行，会弹出一个窗口，以下命令都在此窗口中操            作</p>
+<p>​        2.1 借助淘宝的镜像</p>
+<p>​            $ npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+<p>​        2.2 安装hexo</p>
+<p>​            $ cnpm install -g hexo</p>
+<p>​        2.3 创建文件夹</p>
+<p>​             E:\blog\chencan，存放博客内容的地方</p>
+<p>​        2.4 初始化文件夹</p>
+<p>​             2.4.1 进入文件夹</p>
+<p>​                $ cd /e/blog/chencan</p>
+<p>​            2.4.2 初始化</p>
+<p>​                $ hexo init</p>
+<p>​        2.5 再一次安装hexo,会继续下载一些文件</p>
+<p>​            $ cnpm install</p>
+<p>​        2.6 生成站点</p>
+<p>​            $ hexo g</p>
+<p>​        2.6 启动站点</p>
+<p>​            $ hexo g</p>
+<p>​    3. 在浏览器地址栏输入http:localhost:4000</p>
+<p>二、配置GitHub</p>
+<p>​    1.注册GitHub账号，有则可以忽略</p>
+<p>​    2.创建GitHub仓库(repository)</p>
+<p>​        仓库名称最好是GitHub用户名.github.io，为了以后可以直接使用<a href="http://GitHub用户名.github.io访" target="_blank" rel="noopener">http://GitHub用户名.github.io访</a>            问博客</p>
+<p>​    3.SSH公钥和私钥</p>
+<p>​        运行git-bash.exe,使用$ cd~/.ssh查看本机是否存在ssh的密钥，如果第一次使用，那么会显示                  No such file or directory，</p>
+<p>​        3.1 这时输入</p>
+<p>​        $ ssh-keygen -t rsa -C “GitHub邮件地址” </p>
+<p>​        会在C:\Users\lemon生成一个.ssh文件夹</p>
+<p>​        3.2 打开.ssh文件夹，将id_rsa.pub文件里的内容(密钥)拷贝到  GitHub个人主页–&gt;Settings–&gt;SSH         and GPG keys –&gt;New SSH key–&gt;Key，title随便填写，点击Add SSH key按钮，添加即可</p>
+<p>​        3.3 测试是否添加成功</p>
+<p>​         $ ssh -T <a href="mailto:git@github.com">git@github.com</a> # 注意邮箱地址不用改</p>
+<p>​        提示Are you sure you want to continue connecting (yes/no)?，输入yes,会提示Hi Sanarous!            You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+<p>​        说明SSH添加成功</p>
+<p>​        3.4 如果本机不是第一次使用git接github，则只需要测试SSH是否添加成功</p>
+<ol start="4">
+<li><p>Git提交的用户信息</p>
+<p>$ git config – global user.name “GitHub用户名”</p>
+<p>$ git config – global user.email “GitHub邮箱地址”</p>
+</li>
+</ol>
+<p>三、通过Hexo框架将博客部署到GitHub上</p>
+<p>​    1.打开E:\blog\chencan_config.yml的配置文件，找到deploy并补全</p>
+<p>​        deploy:</p>
+<pre><code>type: git
+
+repo: git@github.com:GitHub用户名/GitHub用户名.github.io.git</code></pre><p>​             branch: master</p>
+<pre><code>2.运行git-bash.exe</code></pre><p>​        $ cd /e/blog/chencan</p>
+<p>​    3.安装一个部署需要的插件</p>
+<p>​        $ npm install hexo-deployer-git –save</p>
+<p>​    4.部署到GitHub上</p>
+<p>​        4.1 清除缓存</p>
+<p>​            $ hexo clean</p>
+<p>​        4.2 本地生成博客</p>
+<p>​            $ hexo g</p>
+<p>​        4.3 部署</p>
+<p>​            $ hexo deploy</p>
+<p>​    5.部署一篇新的博客</p>
+<p>​            5.1 $ hexo new post “文件名”</p>
+<p>​            5.2 用对markdown件友好的编辑器对文章进行编辑，比如 MarkdowmPad、Typora等</p>
+<p>​            5.3 $ hexo clean &amp;&amp; hexo g &amp;&amp;  deploy</p>
+<p>​    6.部署完成后，在浏览器地址栏输入<a href="https://github.com/chencan-lemon/chencan-lemon.github.io" target="_blank" rel="noopener">https://github.com/chencan-lemon/chencan-lemon.github.io</a>  ，         可以看到发布了的博客</p>
+<p>四、Hexo框架的Next主题</p>
+<p>​    1.在GitHub上搜索hexo-next</p>
+<p>​    2.下载Next主题</p>
+<p>​        运行git-bash.exe</p>
+<p>​        2.1 $ cd /e/blog/chencan</p>
+<p>​        2.2 $ git clone <a href="https://github.com/next-theme/hexo-theme-next" target="_blank" rel="noopener">https://github.com/next-theme/hexo-theme-next</a>  themes/next</p>
+<p>​    3.配置博客主题为Next主题</p>
+<p>​        打开E:\blog\chencan_config.yml的配置文件，将theme设置为next</p>
+<p>​    4.测试Next主题</p>
+<p>​        4.1 清除缓存</p>
+<p>​            $ hexo clean</p>
+<p>​        4.2 本地生成博客</p>
+<p>​            $ hexo g</p>
+<p>​        4.3 启动站点</p>
+<p>​            $ hexo s</p>
+<p>​    5.在浏览器地址栏输入http:localhost:4000</p>
+<p>五、Hexo框架的设置</p>
+<p>​    1.全局配置文件</p>
+<p>​        E:\blog\chencan_config.xml</p>
+<p>​    2.主题配置文件</p>
+<p>​        E:\blog\chencan\themes_config.xml</p>
+<p>​    </p>
+]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/07/07/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
