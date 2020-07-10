@@ -212,20 +212,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -262,6 +262,180 @@
 
         <div class="content index posts-expand">
           
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://chencan-lemon.github.io/2020/07/10/Maven/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Can Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/10/Maven/" class="post-title-link" itemprop="url">IDEA用Maven管理和构建项目</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-10 22:36:51 / 修改时间：22:40:48" itemprop="dateCreated datePublished" datetime="2020-07-10T22:36:51+08:00">2020-07-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>Error:java: 不再支持源选项 5。请使用 6 或更高版本。</li>
+</ol>
+<p>解决方法：</p>
+<p>只对当前项目,在IEDA中</p>
+<p>查看编译环境的JDK版本是否一致</p>
+<p>File–&gt;Setting–&gt;Build,Execution,Deployment–&gt;Compiler–&gt;JavaCompiler</p>
+<p>Project bytecode version:    11</p>
+<p>Module                                            Target bytecode version</p>
+<p>javaframework                                11</p>
+<p>File–&gt;Project Settings–&gt;Project</p>
+<p>Project SDK:    11</p>
+<p>Project language level:    11</p>
+<p>File–&gt;Project Settings–&gt;Modules</p>
+<p>Sources    Language level:    11</p>
+<p>所有项目,在D:\soft\apache-maven-3.5.4\conf\settings.xml</p>
+<p>找到profiles标签，添加</p>
+<profile>  
+         <id>jdk-11.0.6</id>  
+         <activation>  
+             <activeByDefault>true</activeByDefault>  
+             <jdk>11.0.6</jdk>  
+         </activation>
+         <properties>
+             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+             <maven.compiler.source>11.0.6</maven.compiler.source>  
+             <maven.compiler.target>11.0.6</maven.compiler.target>   
+         </properties>   
+     </profile>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://chencan-lemon.github.io/2020/07/09/%E8%8B%B1%E6%96%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Can Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/09/%E8%8B%B1%E6%96%87/" class="post-title-link" itemprop="url">英文</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-09 20:06:40" itemprop="dateCreated datePublished" datetime="2020-07-09T20:06:40+08:00">2020-07-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-10 20:43:59" itemprop="dateModified" datetime="2020-07-10T20:43:59+08:00">2020-07-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>steal：偷窃</li>
+<li>fix：固定、确定</li>
+<li>inject：注入、注射</li>
+<li>Artifact Coordinates：工件坐标系</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   

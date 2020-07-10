@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>IDEA用Maven管理和构建项目</title>
+    <url>/2020/07/10/Maven/</url>
+    <content><![CDATA[<ol>
+<li>Error:java: 不再支持源选项 5。请使用 6 或更高版本。</li>
+</ol>
+<p>解决方法：</p>
+<p>只对当前项目,在IEDA中</p>
+<p>查看编译环境的JDK版本是否一致</p>
+<p>File–&gt;Setting–&gt;Build,Execution,Deployment–&gt;Compiler–&gt;JavaCompiler</p>
+<p>Project bytecode version:    11</p>
+<p>Module                                            Target bytecode version</p>
+<p>javaframework                                11</p>
+<p>File–&gt;Project Settings–&gt;Project</p>
+<p>Project SDK:    11</p>
+<p>Project language level:    11</p>
+<p>File–&gt;Project Settings–&gt;Modules</p>
+<p>Sources    Language level:    11</p>
+<p>所有项目,在D:\soft\apache-maven-3.5.4\conf\settings.xml</p>
+<p>找到profiles标签，添加</p>
+<profile>  
+         <id>jdk-11.0.6</id>  
+         <activation>  
+             <activeByDefault>true</activeByDefault>  
+             <jdk>11.0.6</jdk>  
+         </activation>
+         <properties>
+             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+             <maven.compiler.source>11.0.6</maven.compiler.source>  
+             <maven.compiler.target>11.0.6</maven.compiler.target>   
+         </properties>   
+     </profile>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>IDEA Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows系统下搭建个人博客</title>
     <url>/2020/07/08/Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h1 id="安装Hexo框架https-hexo-io"><a href="#安装Hexo框架https-hexo-io" class="headerlink" title="安装Hexo框架https://hexo.io/"></a>安装Hexo框架<a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a></h1><h2 id="安装依赖环境"><a href="#安装依赖环境" class="headerlink" title="安装依赖环境"></a>安装依赖环境</h2><ol>
@@ -80,6 +119,23 @@
       </categories>
       <tags>
         <tag>Win10 Hexo GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英文</title>
+    <url>/2020/07/09/%E8%8B%B1%E6%96%87/</url>
+    <content><![CDATA[<ol>
+<li>steal：偷窃</li>
+<li>fix：固定、确定</li>
+<li>inject：注入、注射</li>
+<li>Artifact Coordinates：工件坐标系</li>
+</ol>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
       </tags>
   </entry>
 </search>
