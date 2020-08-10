@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Maven管理和构建项目</title>
+    <url>/2020/07/10/Maven/</url>
+    <content><![CDATA[<ol>
+<li><p>Error:java: 不再支持源选项 5。请使用 6 或更高版本。</p>
+<p>解决方法：</p>
+<p>只对当前项目,在IEDA中</p>
+<p>查看编译环境的JDK版本是否一致</p>
+<p>File–&gt;Setting–&gt;Build,Execution,Deployment–&gt;Compiler–&gt;JavaCompiler</p>
+<p>Project bytecode version:    11</p>
+<p>Module                                            Target bytecode version</p>
+<p>javaframework                                11</p>
+</li>
+</ol>
+<p>   File–&gt;Project Settings–&gt;Project</p>
+<p>   Project SDK:    11</p>
+<p>   Project language level:    11</p>
+<p>   File–&gt;Project Settings–&gt;Modules</p>
+<p>   Sources    Language level:    11</p>
+<p>   所有项目,在D:\soft\apache-maven-3.5.4\conf\settings.xml</p>
+<p>   找到profiles标签，添加</p>
+   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;profile&gt;  </span><br><span class="line">		 &lt;id&gt;jdk-11.0.6&lt;&#x2F;id&gt;  </span><br><span class="line">		 &lt;activation&gt;  </span><br><span class="line">			 &lt;activeByDefault&gt;true&lt;&#x2F;activeByDefault&gt;  </span><br><span class="line">			 &lt;jdk&gt;11.0.6&lt;&#x2F;jdk&gt;  </span><br><span class="line">		 &lt;&#x2F;activation&gt;</span><br><span class="line">		 &lt;properties&gt;</span><br><span class="line">			 &lt;project.build.sourceEncoding&gt;UTF-8&lt;&#x2F;project.build.sourceEncoding&gt;</span><br><span class="line">			 &lt;maven.compiler.source&gt;11.0.6&lt;&#x2F;maven.compiler.source&gt;  </span><br><span class="line">			 &lt;maven.compiler.target&gt;11.0.6&lt;&#x2F;maven.compiler.target&gt;   </span><br><span class="line">		 &lt;&#x2F;properties&gt;   </span><br><span class="line">	 &lt;&#x2F;profile&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>Cannot resolve plugin org.apache.maven.plugins:maven-jar-plugin:3.2.0</p>
+<p>解决方法：</p>
+<p>设置：File–&gt;Setting–&gt;Build,Execution,Deployment–&gt;Build Tools–&gt;Maven</p>
+<p>Maven home directory:    D:/soft/apache-maven-3.5.4</p>
+<p>User settings file:    D:\soft\apache-maven-3.5.4\conf\settings.xml        勾选Override</p>
+<p>Local repository:    E:javaMvn    一般Maven home directory设置好了，这个就好了</p>
+</li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>problems</category>
+      </categories>
+      <tags>
+        <tag>IDEA Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VMware15.5.1下安装CentOS6.5</title>
     <url>/2020/08/10/VMware15.5.1%E4%B8%8B%E5%AE%89%E8%A3%85CentOS6.5/</url>
     <content><![CDATA[<h1 id="新建虚拟机"><a href="#新建虚拟机" class="headerlink" title="新建虚拟机"></a>新建虚拟机</h1><ol>
@@ -264,113 +305,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Maven管理和构建项目</title>
-    <url>/2020/07/10/Maven/</url>
-    <content><![CDATA[<ol>
-<li><p>Error:java: 不再支持源选项 5。请使用 6 或更高版本。</p>
-<p>解决方法：</p>
-<p>只对当前项目,在IEDA中</p>
-<p>查看编译环境的JDK版本是否一致</p>
-<p>File–&gt;Setting–&gt;Build,Execution,Deployment–&gt;Compiler–&gt;JavaCompiler</p>
-<p>Project bytecode version:    11</p>
-<p>Module                                            Target bytecode version</p>
-<p>javaframework                                11</p>
-</li>
-</ol>
-<p>   File–&gt;Project Settings–&gt;Project</p>
-<p>   Project SDK:    11</p>
-<p>   Project language level:    11</p>
-<p>   File–&gt;Project Settings–&gt;Modules</p>
-<p>   Sources    Language level:    11</p>
-<p>   所有项目,在D:\soft\apache-maven-3.5.4\conf\settings.xml</p>
-<p>   找到profiles标签，添加</p>
-   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;profile&gt;  </span><br><span class="line">		 &lt;id&gt;jdk-11.0.6&lt;&#x2F;id&gt;  </span><br><span class="line">		 &lt;activation&gt;  </span><br><span class="line">			 &lt;activeByDefault&gt;true&lt;&#x2F;activeByDefault&gt;  </span><br><span class="line">			 &lt;jdk&gt;11.0.6&lt;&#x2F;jdk&gt;  </span><br><span class="line">		 &lt;&#x2F;activation&gt;</span><br><span class="line">		 &lt;properties&gt;</span><br><span class="line">			 &lt;project.build.sourceEncoding&gt;UTF-8&lt;&#x2F;project.build.sourceEncoding&gt;</span><br><span class="line">			 &lt;maven.compiler.source&gt;11.0.6&lt;&#x2F;maven.compiler.source&gt;  </span><br><span class="line">			 &lt;maven.compiler.target&gt;11.0.6&lt;&#x2F;maven.compiler.target&gt;   </span><br><span class="line">		 &lt;&#x2F;properties&gt;   </span><br><span class="line">	 &lt;&#x2F;profile&gt;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><p>Cannot resolve plugin org.apache.maven.plugins:maven-jar-plugin:3.2.0</p>
-<p>解决方法：</p>
-<p>设置：File–&gt;Setting–&gt;Build,Execution,Deployment–&gt;Build Tools–&gt;Maven</p>
-<p>Maven home directory:    D:/soft/apache-maven-3.5.4</p>
-<p>User settings file:    D:\soft\apache-maven-3.5.4\conf\settings.xml        勾选Override</p>
-<p>Local repository:    E:javaMvn    一般Maven home directory设置好了，这个就好了</p>
-</li>
-<li></li>
-</ol>
-]]></content>
-      <categories>
-        <category>problems</category>
-      </categories>
-      <tags>
-        <tag>IDEA Maven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英文</title>
-    <url>/2020/07/09/%E8%8B%B1%E6%96%87/</url>
-    <content><![CDATA[<ol>
-<li>steal：偷窃</li>
-<li>fix：固定、确定</li>
-<li>inject：注入、注射</li>
-<li>Artifact Coordinates：工件坐标系</li>
-<li>Qualifier：限定符</li>
-<li>invoke：调用    invocation</li>
-<li>nested：嵌套的</li>
-<li>requried：必需的</li>
-<li>mandatory：强制的；托管的；命令的</li>
-<li>resolver：解析器</li>
-<li>candidate：候选 </li>
-<li>delegate：委托</li>
-<li>placeholder：占位符</li>
-<li>processor：处理器；加工者</li>
-<li>obtain：获得</li>
-<li>internal：内部的       external：外部的</li>
-<li>aware：意识到的；</li>
-<li>enhancer：增强器</li>
-<li>reactive：反应的；响应式</li>
-<li>Front：前面</li>
-<li>Dispatcher：调度器；分配器；      </li>
-<li>DispatcherServlet：分发器；前端控制器；视图呈现概述；前置控制器</li>
-<li>Distribution：分布</li>
-<li>architecture：建筑；架构；建筑学；体系结构</li>
-<li>module： 模块；组件；模数</li>
-<li>profiles：配置文件；学院概况；轮廓；特征文件</li>
-<li>Retention：保留；扣留，滞留；记忆力；闭尿；</li>
-</ol>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>javaframework</title>
-    <url>/2020/07/11/javaframework/</url>
-    <content><![CDATA[<h1 id="spring"><a href="#spring" class="headerlink" title="spring"></a>spring</h1><ol>
-<li><p>Autowired annotation should only be used on methods with parameters</p>
-<p>@AutoWired注解不仅可以使用在成员变量上，也可以使用在方法上，但方法必须是有参数的。</p>
-</li>
-<li></li>
-</ol>
-<h1 id="springboot"><a href="#springboot" class="headerlink" title="springboot"></a>springboot</h1><ol>
-<li><p>springboot整合mybatis</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Loading class &#96;com.mysql.jdbc.Driver&#39;. This is deprecated. The new driver class is &#96;com.mysql.cj.jdbc.Driver&#39;. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.</span><br></pre></td></tr></table></figure>
-
-<p>solution:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">driver-class-name: com.mysql.cj.jdbc.Driver</span><br></pre></td></tr></table></figure>
-</li>
-<li></li>
-</ol>
-]]></content>
-      <categories>
-        <category>problems</category>
-      </categories>
-      <tags>
-        <tag>spring springboot</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>springmvc</title>
     <url>/2020/07/24/springmvc/</url>
     <content><![CDATA[<ol>
@@ -413,6 +347,32 @@
       </tags>
   </entry>
   <entry>
+    <title>javaframework</title>
+    <url>/2020/07/11/javaframework/</url>
+    <content><![CDATA[<h1 id="spring"><a href="#spring" class="headerlink" title="spring"></a>spring</h1><ol>
+<li><p>Autowired annotation should only be used on methods with parameters</p>
+<p>@AutoWired注解不仅可以使用在成员变量上，也可以使用在方法上，但方法必须是有参数的。</p>
+</li>
+<li></li>
+</ol>
+<h1 id="springboot"><a href="#springboot" class="headerlink" title="springboot"></a>springboot</h1><ol>
+<li><p>springboot整合mybatis</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Loading class &#96;com.mysql.jdbc.Driver&#39;. This is deprecated. The new driver class is &#96;com.mysql.cj.jdbc.Driver&#39;. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.</span><br></pre></td></tr></table></figure>
+
+<p>solution:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">driver-class-name: com.mysql.cj.jdbc.Driver</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>problems</category>
+      </categories>
+      <tags>
+        <tag>spring springboot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>乱码问题</title>
     <url>/2020/07/21/%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>乱码问题解决：</p>
@@ -426,5 +386,45 @@
       <categories>
         <category>Problems</category>
       </categories>
+  </entry>
+  <entry>
+    <title>英文</title>
+    <url>/2020/07/09/%E8%8B%B1%E6%96%87/</url>
+    <content><![CDATA[<ol>
+<li>steal：偷窃</li>
+<li>fix：固定、确定</li>
+<li>inject：注入、注射</li>
+<li>Artifact Coordinates：工件坐标系</li>
+<li>Qualifier：限定符</li>
+<li>invoke：调用    invocation</li>
+<li>nested：嵌套的</li>
+<li>requried：必需的</li>
+<li>mandatory：强制的；托管的；命令的</li>
+<li>resolver：解析器</li>
+<li>candidate：候选 </li>
+<li>delegate：委托</li>
+<li>placeholder：占位符</li>
+<li>processor：处理器；加工者</li>
+<li>obtain：获得</li>
+<li>internal：内部的       external：外部的</li>
+<li>aware：意识到的；</li>
+<li>enhancer：增强器</li>
+<li>reactive：反应的；响应式</li>
+<li>Front：前面</li>
+<li>Dispatcher：调度器；分配器；      </li>
+<li>DispatcherServlet：分发器；前端控制器；视图呈现概述；前置控制器</li>
+<li>Distribution：分布</li>
+<li>architecture：建筑；架构；建筑学；体系结构</li>
+<li>module： 模块；组件；模数</li>
+<li>profiles：配置文件；学院概况；轮廓；特征文件</li>
+<li>Retention：保留；扣留，滞留；记忆力；闭尿；</li>
+</ol>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
+      </tags>
   </entry>
 </search>
