@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CentsOS6.5安装JDK</title>
-    <url>/2020/08/19/CentsOS6.5%E5%AE%89%E8%A3%85JDK/</url>
+    <title>CentsOS6.5安装和配置JDK</title>
+    <url>/2020/08/19/CentsOS6.5%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEJDK/</url>
     <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="下载-jdk-的-tar-包"><a href="#下载-jdk-的-tar-包" class="headerlink" title="下载 jdk 的 tar 包"></a>下载 jdk 的 tar 包</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.oracle.com&#x2F;cn&#x2F;java&#x2F;technologies&#x2F;javase&#x2F;javase-jdk8-downloads.html</span><br></pre></td></tr></table></figure>
 
 <h2 id="查看是否安装过-jdk"><a href="#查看是否安装过-jdk" class="headerlink" title="查看是否安装过 jdk"></a>查看是否安装过 jdk</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rpm -qa | grep java</span><br></pre></td></tr></table></figure>
@@ -35,7 +35,7 @@
 
 <h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h1><h2 id="编辑环境变量的配置文件"><a href="#编辑环境变量的配置文件" class="headerlink" title="编辑环境变量的配置文件"></a>编辑环境变量的配置文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;profile</span><br><span class="line">通过i键进入插入模式，在最后一行的后面新起一行，写入java的环境变量配置</span><br></pre></td></tr></table></figure>
 
-<h2 id="编辑的内容"><a href="#编辑的内容" class="headerlink" title="编辑的内容"></a>编辑的内容</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">JAVA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;java&#x2F;jdk1.8.0_211</span><br><span class="line">CLASSPATH&#x3D;.:$JAVA_HOME&#x2F;lib.tools.jar</span><br><span class="line">PATH&#x3D;$JAVA_HOME&#x2F;bin:$PATH</span><br><span class="line">export JAVA_HOME CLASSPATH PATH</span><br><span class="line"></span><br><span class="line">ESC键退出插入模式</span><br><span class="line">:wq保存退出</span><br></pre></td></tr></table></figure>
+<h2 id="编辑的内容"><a href="#编辑的内容" class="headerlink" title="编辑的内容"></a>编辑的内容</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">JAVA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;java&#x2F;jdk1.8.0_211</span><br><span class="line">CLASSPATH&#x3D;.:$JAVA_HOME&#x2F;lib.tools.jar</span><br><span class="line">PATH&#x3D;$JAVA_HOME&#x2F;bin:$PATH</span><br><span class="line">export JAVA_HOME CLASSPATH PATH</span><br><span class="line"></span><br><span class="line">export JAVA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;java&#x2F;jdk1.8.0_211</span><br><span class="line">export PATH&#x3D;$PATH:$JAVAHOME&#x2F;bin</span><br><span class="line"></span><br><span class="line">ESC键退出插入模式</span><br><span class="line">:wq保存退出</span><br></pre></td></tr></table></figure>
 
 <h2 id="更改的配置立即生效"><a href="#更改的配置立即生效" class="headerlink" title="更改的配置立即生效"></a>更改的配置立即生效</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source &#x2F;etc&#x2F;profile</span><br></pre></td></tr></table></figure>
 
@@ -47,50 +47,6 @@
       </categories>
       <tags>
         <tag>CentsOS6.5 JDK</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英文</title>
-    <url>/2020/07/09/English/</url>
-    <content><![CDATA[<h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><p>Artifact Coordinates：工件坐标系</p>
-<p>aware：意识到的；</p>
-<p>architecture：建筑；架构；建筑学；体系结构</p>
-<h1 id="B"><a href="#B" class="headerlink" title="B"></a>B</h1><ol>
-<li>boot：启动</li>
-</ol>
-<h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><p>candidate：候选 </p>
-<h1 id="D"><a href="#D" class="headerlink" title="D"></a>D</h1><p>delegate：委托</p>
-<p>Dispatcher：调度器；分配器；   </p>
-<p>DispatcherServlet：分发器；前端控制器；视图呈现概述；前置控制器   </p>
-<p>Distribution：分布</p>
-<h1 id="E"><a href="#E" class="headerlink" title="E"></a>E</h1><p>enhancer：增强器</p>
-<p>export：导出、输出</p>
-<h1 id="F"><a href="#F" class="headerlink" title="F"></a>F</h1><p>fix：固定、确定</p>
-<p>Front：前面</p>
-<p>flush：清除；发红；使发光；因……兴奋；冲洗，冲掉；把……赶出隐藏地；使暴露；绽出新芽；嵌平</p>
-<h1 id="G"><a href="#G" class="headerlink" title="G"></a>G</h1><h1 id="H"><a href="#H" class="headerlink" title="H"></a>H</h1><h1 id="I"><a href="#I" class="headerlink" title="I"></a>I</h1><p>inject：注入、注射</p>
-<p>invoke：调用    invocation</p>
-<p>internal：内部的       external：外部的</p>
-<h1 id="J"><a href="#J" class="headerlink" title="J"></a>J</h1><h1 id="K"><a href="#K" class="headerlink" title="K"></a>K</h1><h1 id="L"><a href="#L" class="headerlink" title="L"></a>L</h1><h1 id="M"><a href="#M" class="headerlink" title="M"></a>M</h1><p>mandatory：强制的；托管的；命令的</p>
-<p>module： 模块；组件；模数</p>
-<p>master：主</p>
-<h1 id="N"><a href="#N" class="headerlink" title="N"></a>N</h1><p>nested：嵌套的</p>
-<h1 id="O"><a href="#O" class="headerlink" title="O"></a>O</h1><p>obtain：获得</p>
-<h1 id="P"><a href="#P" class="headerlink" title="P"></a>P</h1><p>placeholder：占位符</p>
-<p>processor：处理器；加工者</p>
-<p>profiles：配置文件；学院概况；轮廓；特征文件</p>
-<h1 id="Q"><a href="#Q" class="headerlink" title="Q"></a>Q</h1><p>Qualifier：限定符</p>
-<h1 id="R"><a href="#R" class="headerlink" title="R"></a>R</h1><p>requried：必需的</p>
-<p>resolver：解析器</p>
-<p>reactive：反应的；响应式</p>
-<p>Retention：保留；扣留，滞留；记忆力；闭尿；</p>
-<h1 id="S"><a href="#S" class="headerlink" title="S"></a>S</h1><p>steal：偷窃</p>
-<h1 id="T"><a href="#T" class="headerlink" title="T"></a>T</h1><h1 id="U"><a href="#U" class="headerlink" title="U"></a>U</h1><h1 id="V"><a href="#V" class="headerlink" title="V"></a>V</h1><h1 id="W"><a href="#W" class="headerlink" title="W"></a>W</h1><h1 id="X"><a href="#X" class="headerlink" title="X"></a>X</h1><h1 id="Y"><a href="#Y" class="headerlink" title="Y"></a>Y</h1><h1 id="Z"><a href="#Z" class="headerlink" title="Z"></a>Z</h1>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>翻译</tag>
       </tags>
   </entry>
   <entry>
@@ -233,10 +189,67 @@
 <p>ifconfig eth0</p>
 ]]></content>
       <categories>
-        <category>Vmware</category>
+        <category>VMware</category>
       </categories>
       <tags>
         <tag>VMware15.5.1 CentOS6.5</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VMware15.5.1下安装kail2020.3</title>
+    <url>/2020/08/21/VMware15.5.1%E4%B8%8B%E5%AE%89%E8%A3%85kail2020.3/</url>
+    <content><![CDATA[<h1 id="root用户登录"><a href="#root用户登录" class="headerlink" title="root用户登录"></a>root用户登录</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line">sudo su</span><br><span class="line">cd</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>VMware</category>
+      </categories>
+      <tags>
+        <tag>VMware15.5.1 kail2020.3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英文</title>
+    <url>/2020/07/09/English/</url>
+    <content><![CDATA[<h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><p>Artifact Coordinates：工件坐标系</p>
+<p>aware：意识到的；</p>
+<p>architecture：建筑；架构；建筑学；体系结构</p>
+<h1 id="B"><a href="#B" class="headerlink" title="B"></a>B</h1><ol>
+<li>boot：启动</li>
+</ol>
+<h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><p>candidate：候选 </p>
+<h1 id="D"><a href="#D" class="headerlink" title="D"></a>D</h1><p>delegate：委托</p>
+<p>Dispatcher：调度器；分配器；   </p>
+<p>DispatcherServlet：分发器；前端控制器；视图呈现概述；前置控制器   </p>
+<p>Distribution：分布</p>
+<h1 id="E"><a href="#E" class="headerlink" title="E"></a>E</h1><p>enhancer：增强器</p>
+<p>export：导出、输出</p>
+<h1 id="F"><a href="#F" class="headerlink" title="F"></a>F</h1><p>fix：固定、确定</p>
+<p>Front：前面</p>
+<p>flush：清除；发红；使发光；因……兴奋；冲洗，冲掉；把……赶出隐藏地；使暴露；绽出新芽；嵌平</p>
+<h1 id="G"><a href="#G" class="headerlink" title="G"></a>G</h1><h1 id="H"><a href="#H" class="headerlink" title="H"></a>H</h1><h1 id="I"><a href="#I" class="headerlink" title="I"></a>I</h1><p>inject：注入、注射</p>
+<p>invoke：调用    invocation</p>
+<p>internal：内部的       external：外部的</p>
+<h1 id="J"><a href="#J" class="headerlink" title="J"></a>J</h1><h1 id="K"><a href="#K" class="headerlink" title="K"></a>K</h1><h1 id="L"><a href="#L" class="headerlink" title="L"></a>L</h1><h1 id="M"><a href="#M" class="headerlink" title="M"></a>M</h1><p>mandatory：强制的；托管的；命令的</p>
+<p>module： 模块；组件；模数</p>
+<p>master：主</p>
+<h1 id="N"><a href="#N" class="headerlink" title="N"></a>N</h1><p>nested：嵌套的</p>
+<h1 id="O"><a href="#O" class="headerlink" title="O"></a>O</h1><p>obtain：获得</p>
+<h1 id="P"><a href="#P" class="headerlink" title="P"></a>P</h1><p>placeholder：占位符</p>
+<p>processor：处理器；加工者</p>
+<p>profiles：配置文件；学院概况；轮廓；特征文件</p>
+<h1 id="Q"><a href="#Q" class="headerlink" title="Q"></a>Q</h1><p>Qualifier：限定符</p>
+<h1 id="R"><a href="#R" class="headerlink" title="R"></a>R</h1><p>requried：必需的</p>
+<p>resolver：解析器</p>
+<p>reactive：反应的；响应式</p>
+<p>Retention：保留；扣留，滞留；记忆力；闭尿；</p>
+<h1 id="S"><a href="#S" class="headerlink" title="S"></a>S</h1><p>steal：偷窃</p>
+<h1 id="T"><a href="#T" class="headerlink" title="T"></a>T</h1><h1 id="U"><a href="#U" class="headerlink" title="U"></a>U</h1><h1 id="V"><a href="#V" class="headerlink" title="V"></a>V</h1><h1 id="W"><a href="#W" class="headerlink" title="W"></a>W</h1><h1 id="X"><a href="#X" class="headerlink" title="X"></a>X</h1><h1 id="Y"><a href="#Y" class="headerlink" title="Y"></a>Y</h1><h1 id="Z"><a href="#Z" class="headerlink" title="Z"></a>Z</h1>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>翻译</tag>
       </tags>
   </entry>
   <entry>
@@ -278,6 +291,66 @@
       </categories>
       <tags>
         <tag>IDEA Maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VMware的安装和彻底卸载</title>
+    <url>/2020/08/09/VMware%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BD/</url>
+    <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol>
+<li>运行VMware-workstation-full-15.5.1-15018445.exe，点击“下一步”</li>
+<li>勾选“我接收许可协议中的条款(A)”,点击“下一步”</li>
+<li>自定义安装，点击“更改”，文件夹名称：D:\VMware\VMware Workstation，点击“确定”</li>
+<li>不断点击“下一步”</li>
+<li>点击“安装”</li>
+<li>点击“许可证”，输入许可证密钥</li>
+<li>点击“完成”</li>
+</ol>
+<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><ol>
+<li>运行VMware-workstation-full-15.5.1-15018445.exe，点击“下一步”</li>
+<li>“删除”：从您的计算机中删除VMware Workstation Pro</li>
+<li>不断“下一步”，点击“删除”，删除完成后，点击“完成”即可</li>
+<li>注册表编辑器：Win+R快捷键，regedit</li>
+<li>来到HKEY_CURRENT_USER/Software/VMware, Inc.    右键删除VMware, Inc.文件夹</li>
+<li>来到D:\VMware，右键删除VMware文件夹</li>
+<li>重启计算机</li>
+</ol>
+<h1 id="VMware15-5-1下安装CentOS6-5"><a href="#VMware15-5-1下安装CentOS6-5" class="headerlink" title="VMware15.5.1下安装CentOS6.5"></a>VMware15.5.1下安装CentOS6.5</h1><ol>
+<li><p>运行VMware-workstation-full-15.5.1-15018445.exe</p>
+</li>
+<li><p>点击“创建新的虚拟机”，进入如下页面，勾选“典型(推荐)”，点击“下一步”</p>
+</li>
+<li><p>安装客户机操作系统，点击“安装程序光盘映像文件</p>
+<p> 浏览：D:\VMware\VMware Workstation\CentOS-6.5-x86_64-minimal.iso</p>
+</li>
+<li><p>勾选“稍后安装操作系统”，点击“下一步”</p>
+</li>
+<li><p>客户机操作系统：Linux(L)，版本(V)：CentOS 6 64位</p>
+</li>
+<li><p>虚拟机名称：CentOS6_64，浏览：D:\Virtual Machines\CentOS6_64，点击“下一步”</p>
+</li>
+<li><p>最大磁盘的大小：20.0，勾选“将虚拟机拆分成多个文件”，点击“下一步”</p>
+</li>
+<li><p>点击“自定义硬件”</p>
+</li>
+<li><p>点击“内存”，此虚拟机的内存(M)：2048</p>
+</li>
+<li><p>点击“处理器”</p>
+<p>1）处理器数量：2</p>
+<p>2）每个处理器的内核数量：2</p>
+</li>
+<li><p>点击“新 CD/DVD(IDE)”，勾选“使用ISO映像文件”，浏览：D:\VMware\VMware Workstation\CentOS-6.5-x86_64-minimal.iso</p>
+</li>
+<li><p>点击“关闭”</p>
+</li>
+<li><p>点击“完成”</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Vmware</category>
+      </categories>
+      <tags>
+        <tag>Windows VMware15.5.1 CenOS6.X</tag>
       </tags>
   </entry>
   <entry>
@@ -375,66 +448,6 @@
       </categories>
       <tags>
         <tag>Win10 Hexo GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VMware的安装和彻底卸载</title>
-    <url>/2020/08/09/VMware%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BD/</url>
-    <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol>
-<li>运行VMware-workstation-full-15.5.1-15018445.exe，点击“下一步”</li>
-<li>勾选“我接收许可协议中的条款(A)”,点击“下一步”</li>
-<li>自定义安装，点击“更改”，文件夹名称：D:\VMware\VMware Workstation，点击“确定”</li>
-<li>不断点击“下一步”</li>
-<li>点击“安装”</li>
-<li>点击“许可证”，输入许可证密钥</li>
-<li>点击“完成”</li>
-</ol>
-<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><ol>
-<li>运行VMware-workstation-full-15.5.1-15018445.exe，点击“下一步”</li>
-<li>“删除”：从您的计算机中删除VMware Workstation Pro</li>
-<li>不断“下一步”，点击“删除”，删除完成后，点击“完成”即可</li>
-<li>注册表编辑器：Win+R快捷键，regedit</li>
-<li>来到HKEY_CURRENT_USER/Software/VMware, Inc.    右键删除VMware, Inc.文件夹</li>
-<li>来到D:\VMware，右键删除VMware文件夹</li>
-<li>重启计算机</li>
-</ol>
-<h1 id="VMware15-5-1下安装CentOS6-5"><a href="#VMware15-5-1下安装CentOS6-5" class="headerlink" title="VMware15.5.1下安装CentOS6.5"></a>VMware15.5.1下安装CentOS6.5</h1><ol>
-<li><p>运行VMware-workstation-full-15.5.1-15018445.exe</p>
-</li>
-<li><p>点击“创建新的虚拟机”，进入如下页面，勾选“典型(推荐)”，点击“下一步”</p>
-</li>
-<li><p>安装客户机操作系统，点击“安装程序光盘映像文件</p>
-<p> 浏览：D:\VMware\VMware Workstation\CentOS-6.5-x86_64-minimal.iso</p>
-</li>
-<li><p>勾选“稍后安装操作系统”，点击“下一步”</p>
-</li>
-<li><p>客户机操作系统：Linux(L)，版本(V)：CentOS 6 64位</p>
-</li>
-<li><p>虚拟机名称：CentOS6_64，浏览：D:\Virtual Machines\CentOS6_64，点击“下一步”</p>
-</li>
-<li><p>最大磁盘的大小：20.0，勾选“将虚拟机拆分成多个文件”，点击“下一步”</p>
-</li>
-<li><p>点击“自定义硬件”</p>
-</li>
-<li><p>点击“内存”，此虚拟机的内存(M)：2048</p>
-</li>
-<li><p>点击“处理器”</p>
-<p>1）处理器数量：2</p>
-<p>2）每个处理器的内核数量：2</p>
-</li>
-<li><p>点击“新 CD/DVD(IDE)”，勾选“使用ISO映像文件”，浏览：D:\VMware\VMware Workstation\CentOS-6.5-x86_64-minimal.iso</p>
-</li>
-<li><p>点击“关闭”</p>
-</li>
-<li><p>点击“完成”</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Vmware</category>
-      </categories>
-      <tags>
-        <tag>Windows VMware15.5.1 CenOS6.X</tag>
       </tags>
   </entry>
   <entry>
